@@ -32,6 +32,18 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'cucumber-rails', :require => false
+  # database_cleaner is not required, but highly recommended
+  gem 'database_cleaner'
+end
+
+group :test do
+  gem 'cucumber'
+  gem 'rspec'
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'capybara'
+  gem 'selenium-webdriver'
 end
 
 group :development do
@@ -89,10 +101,5 @@ gem 'rails-i18n'
 
 #environment variables
 gem 'figaro'
-
-# testing
-gem 'rspec-rails'
-gem 'factory_girl_rails'
-gem 'capybara'
 
 gem 'rufus-scheduler'
